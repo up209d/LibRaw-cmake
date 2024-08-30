@@ -26,19 +26,7 @@ jobs:
       name: Clone LibRaw
 
     - run: |
-        echo A
-        ls
-        pwd
-        echo B
-        mkdir build
-        cd build
-        pwd
-        echo C
-        ls
+        env
         cmake -DENABLE_OPENMP=OFF -DLIBRAW_PATH=$(pwd)/../LibRaw ..
         cmake --build .
-        pwd
-        echo D
-        cd ..
-        ls
       name: Build LibRaw
