@@ -27,6 +27,9 @@ jobs:
 
     - run: |
         env
+        mkdir build
+        cd build
+        cmake --version
         cmake -DENABLE_OPENMP=OFF -DLIBRAW_PATH=$(pwd)/../LibRaw ..
         cmake --build .
       name: Build LibRaw
